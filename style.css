@@ -1,0 +1,89 @@
+@font-face {
+    font-family: Lobster;
+    src: url(Lobster-Regular.ttf);
+}
+
+
+
+html, body {
+ height: 100%;
+
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.header{
+display: flex;
+flex-direction:row;
+gap: 30px;
+}
+
+.play-button {
+    background-color: #28694a;
+    border-radius: 10px;
+    color: white;
+    width: 100px;
+    font-size: 32px;
+}
+
+
+.title {
+    color: #c23329;
+    font-family: Lobster;
+    font-size: 3rem;
+}
+
+.puzzle-container {
+display: grid;
+background-color: white;
+height: 550px;
+width: 1000px;
+grid-template-rows: repeat(5, 1fr);
+grid-template-columns: repeat(5, 75px 1fr);
+}
+
+.puzzle-container > div {
+    border: 1px solid black;
+
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    
+}
+
+.details {
+    background-color: #28694a;
+}
+
+.details > div {
+    display: none;
+
+}
+
+
+.description {
+    
+    font-size: 2rem;
+    width: 700px;
+    
+}
+
+.text-input {
+    height: 2rem;
+    width: 200px;
+    font-size: 2rem;
+    
+}
+
+
