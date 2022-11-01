@@ -42,8 +42,8 @@ gap: 30px;
 .puzzle-container {
 display: grid;
 background-color: white;
-height: 550px;
-width: 1000px;
+height: 600px;
+width: 1250px;
 grid-template-rows: repeat(5, 1fr);
 grid-template-columns: repeat(5, 75px 1fr);
 }
@@ -63,7 +63,13 @@ grid-template-columns: repeat(5, 75px 1fr);
 }
 
 .details {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
     background-color: #28694a;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 .details > div {

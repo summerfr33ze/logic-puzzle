@@ -12,7 +12,7 @@ details.forEach(detail => detail.addEventListener ("click", (event) =>{
         detail.style.backgroundColor = "#28694a"
 
     })
-    event.currentTarget.style.backgroundColor = "white"
+    event.currentTarget.style.backgroundColor = "#c23329"
     currentPizza = event.currentTarget.dataset.pizza
     currentIndex = event.currentTarget.dataset.id
     console.log(currentIndex)
@@ -25,9 +25,16 @@ textInputForm.addEventListener("submit", (event) => {
         detailText[(currentIndex * 2) - 1].style.display = "block"
         detailText[(currentIndex * 2) - 2].style.display = "block"
     }
-    else {details[currentIndex - 1].textContent = "You Lose"}
+    else {
+        details.forEach(detail => {
+            detail.textContent = ""
+        })
+        details[currentIndex - 1].textContent = "You Lose"
+
+    }
 
 })
+
 
 
 playButton.addEventListener("click", () => {
