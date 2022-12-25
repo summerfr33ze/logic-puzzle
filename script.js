@@ -21,17 +21,28 @@ details.forEach(detail => detail.addEventListener ("click", (event) =>{
 
 textInputForm.addEventListener("submit", (event) => {
     event.preventDefault()
-    if(currentPizza === textInput.value){
+
+    const pizzaTypesArray = ["c","s","b","p","v"]
+    const index = pizzaTypesArray.indexOf(currentPizza)
+    if (index !== -1){
+        pizzaTypesArray.splice(index, 1)
+    }
+
+    
+    if(textInput.value === currentPizza || textInput.value === currentPizza.toUpperCase()){
         detailText[(currentIndex * 2) - 1].style.display = "block"
         detailText[(currentIndex * 2) - 2].style.display = "block"
     }
-    else {
+
+    else if (pizzaTypesArray.includes(textInput.value)) {
         details.forEach(detail => {
             detail.textContent = ""
         })
         details[currentIndex - 1].textContent = "You Lose"
 
     }
+
+    else return
 
 })
 
